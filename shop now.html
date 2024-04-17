@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>E.V</title>
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+ <style>
+body{
+	margin:0px;
+	padding:0px;
+} 
+ 
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+img.avatar {
+  width: 20%;
+  border-radius: 20%;
+}
+
+.user {
+  padding: 8px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 90%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Add padding BETWEEN each column */
+.row1,
+.row1 > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  margin-top: 1%;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+ /* Sticky Content
+   ========================================================================== */
+   .sticky-content {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.sticky-content-title {
+    margin: 0;
+}
+</style>
+</head>
+<body>
+     
+                   <section class="sticky-content">
+		              <div class="row sticky-content-title" style="background-color:black; height:100px;">
+		                        
+                                    
+									<div class="col-sm-2">
+										<img src="https://as1.ftcdn.net/v2/jpg/01/11/96/36/1000_F_111963629_Oy5KwwD3W81FOp0ZNL4mUty8XNI5kklz.jpg" height="100px;">
+									</div>
+
+									<div class="col-sm-5" style="text-align:right; padding:30px; color:white;">
+									  <h1>ELECTRIC HUB</h1>
+									</div>
+									
+									 <div class="col-sm-5" >
+									     
+										     <ul>
+											 <i class="fa fa-shopping-cart" style="font-size:36px; color:white; padding:25px; float:right"></i>
+											 <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;  float:right; margin-top: 35px; background-color: rgb(16, 243, 16); text-decoration: none;">Login</button></li>
+											 <li><a style="color:white; float:right; padding:20px; text-decoration: none;" href="index.html" id="index">Back to home</a></li>
+											</ul>
+										 
+									 </div>
+                  </section>
+				           </div>
+                                                    <div id="id01" class="modal">
+  
+                                                      <form class="modal-content animate" action="/action_page.php" method="post">
+                                                        <div class="imgcontainer">
+                                                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                        <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt="Avatar" class="avatar">
+                                                        </div>
+                                                      
+                                                        <div class="user container">
+                                                        <label for="uname"><b>Username</b></label>
+                                                        <input type="text" placeholder="Enter Username" name="uname" required>
+                                                      
+                                                        <label for="psw"><b>Password</b></label>
+                                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                                          
+                                                        <button type="submit" style="background-color: rgb(13, 240, 13);">Login</button>
+                                                        <label>
+                                                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                                                        </label>
+                                                        </div>
+                                                      
+                                                        <div class="user container" style="background-color:#f1f1f1">
+                                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                                        </div>
+                                                      </form>
+                                                      </div>
+                                                      
+                                                      <script>
+                                                      // Get the modal
+                                                      var modal = document.getElementById('id01');
+                                                      
+                                                      // When the user clicks anywhere outside of the modal, close it
+                                                      window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                          modal.style.display = "none";
+                                                        }
+                                                      }
+                                                              </script>
+
+
+                                                               <!-- Portfolio Gallery Grid -->
+                                                              <div id="myBtnContainer">
+                                                                <center>
+                                                                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                                                                <button class="btn" onclick="filterSelection('Bicycles')"> Bicycles</button>
+                                                                <button class="btn" onclick="filterSelection('Bikes')"> Bikes</button>
+                                                                <button class="btn" onclick="filterSelection('Cars')"> Cars</button>
+                                                                </center>
+                                                              </div>
+                                                              
+                                                             
+                                                              <div class="row1">
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                  <img src="https://www.mgmotor.co.in/content/dam/mg-redesign/mg-comet-ev/images/cm-img-dsc-085.JPG" style="width:100%; height:347px">
+                                                                   <center><h4>MG Comet</h4>
+                                                                    <p>Starts From ₹9,98,000 </p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bikes">
+                                                                  <div class="content">
+                                                                    <img src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-94681571/94681571.jpg" style="width:100%; height: 347px;">
+                                                                    <center><h4>Ola S1</h4>
+                                                                    <p>₹ 80,000 to 1,80,000 on road in mumbai.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                    <img src="https://english.cdn.zeenews.com/sites/default/files/2021/12/20/997584-tata-tigor-ev.jpg" style="width:100%; height:347px">
+                                                                    <center><h4>TATA Tigor</h4>
+                                                                    <p>Rs 25 Lakh to 40 Lakh.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bicycles">
+                                                                  <div class="content">
+                                                                    <img src="https://ik.imagekit.io/voltebyk/turbo/White__69___Large_.jpg?updatedAt=1681929129158" style="width:100%; height:347px">
+                                                                    <center><h4>Voltebyk Bicycle</h4>
+                                                                    <p>only 39,000/- on road.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bicycles">
+                                                                  <div class="content">
+                                                                  <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/302669672/IF/DJ/DQ/180668486/two-seats-electric-scooter-50-60km-mileage-electric-bicycle-with-pedals.webp" style="width:100%; height:347px;">
+                                                                  <center> <h4> Mileage Electric Bicycle With Pedals.</h4>
+                                                                    <p>₹ 18,000 on road.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="column Bikes">
+                                                                  <div class="content">
+                                                                    <img src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-94681571/94681571.jpg" style="width:100%; height: 347px;">
+                                                                    <center> <h4>Ola S1</h4>
+                                                                    <p>₹ 80,000 to 1,80,000 on road in mumbai.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bikes">
+                                                                  <div class="content">
+                                                                  <img src="https://bd.gaadicdn.com/processedimages/ather-energy/450x/494X300/450x63bbb0ed6ad28.jpg?imwidth=412&impolicy=resize"  style="width:100%; height:347px">
+                                                                    <center><h4>Anther 450x</h4>
+                                                                    <p>Rs.1.26 - 1.29 Lakh*Get On Road Price.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                
+                                                              
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                    <img src="https://english.cdn.zeenews.com/sites/default/files/2021/12/20/997584-tata-tigor-ev.jpg" style="width:100%; height:347px">
+                                                                    <center> <h4>TATA Tigor</h4>
+                                                                    <p>Rs 25 Lakh to 40 Lakh.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                  <img src="https://imgd.aeplcdn.com/1280x720/cw/ec/29580/Hyundai-Kona-Electric-Right-Front-Three-Quarter-162185.jpg?wm=0&q=75" style="width:100%; height:347px">
+                                                                  <center><h4>Hyundi Kona</h4>
+                                                                    <p>Rs. 23,84,000 Ex-Showroom Price.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bicycles">
+                                                                  <div class="content">
+                                                                  <img src="https://global.honda/content/dam/site/global-en/newsroom/cq_img/news/2023/01/c230110eng_01.jpg" style="width:100%; height:347px">
+                                                                  <center><h4>Honda Bicycle</h4>
+                                                                    <p>₹ 40,000/- on road.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                  <img src="https://www.mgmotor.co.in/content/dam/mg-redesign/mg-comet-ev/images/cm-img-dsc-085.JPG" style="width:100%; height:347px">
+                                                                    <center><h4>MG Comet</h4>
+                                                                    <p>Starts From ₹9,98,000</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="column Bikes">
+                                                                  <div class="content">
+                                                                  <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/SI/JD/GZ/116932215/hero-electric-optima-cx-blue-500x500.jpg" style="width:100%; height:347px">
+                                                                  <center><h4>HERO Optima hx</h4>
+                                                                    <p>RS.80,000 TO 1,50,000 ON ROAD</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="column Bicycles">
+                                                                  <div class="content">
+                                                                    <img src="https://ik.imagekit.io/voltebyk/turbo/White__69___Large_.jpg?updatedAt=1681929129158" style="width:100%; height:347px">
+                                                                    <center><h4>Voltebyk Bicycle</h4>
+                                                                    <p>only 39,000/- on road.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="column Cars">
+                                                                  <div class="content">
+                                                                  <img src="https://imgd.aeplcdn.com/1280x720/cw/ec/29580/Hyundai-Kona-Electric-Right-Front-Three-Quarter-162185.jpg?wm=0&q=75" style="width:100%; height:347px">
+                                                                  <center><h4>Hyundi Kona</h4>
+                                                                    <p>Rs. 23,84,000 Ex-Showroom Price.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bikes">
+                                                                  <div class="content">
+                                                                  <img src="https://bd.gaadicdn.com/processedimages/ather-energy/450x/494X300/450x63bbb0ed6ad28.jpg?imwidth=412&impolicy=resize"  style="width:100%; height:347px">
+                                                                  <center><h4>Anther 450x</h4>
+                                                                    <p>Rs.1.26 - 1.29 Lakh*Get On Road Price.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="column Bicycles">
+                                                                  <div class="content">
+                                                                  <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/302669672/IF/DJ/DQ/180668486/two-seats-electric-scooter-50-60km-mileage-electric-bicycle-with-pedals.webp" style="width:100%; height:347px;">
+                                                                  <center><h4> Mileage Electric Bicycle With Pedals.</h4>
+                                                                    <p>₹ 18,000 on road.</p>
+                                                                    <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                    <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                    </div>
+                                                                    </div>
+
+                                                                    <div class="column Bikes">
+                                                                      <div class="content">
+                                                                      <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/SI/JD/GZ/116932215/hero-electric-optima-cx-blue-500x500.jpg" style="width:100%; height:347px">
+                                                                      <center><h4>HERO Optima hx</h4>
+                                                                        <p>RS.80,000 TO 1,50,000 ON ROAD</p>
+                                                                        <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                        <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                      </div>
+                                                                    </div>
+
+                                                                    <div class="column Bicycles">
+                                                                      <div class="content">
+                                                                      <img src="https://global.honda/content/dam/site/global-en/newsroom/cq_img/news/2023/01/c230110eng_01.jpg" style="width:100%; height:347px">
+                                                                      <center><h4>Honda Bicycle</h4>
+                                                                        <p>₹ 40,000/- on road.</p>
+                                                                        <button calss="btn btn-success" style ="background-color:rgb(17, 188, 17); padding:10px;">Buy</button>
+                                                                        <button calss="btn btn-success" style ="background-color:orange; padding:10px;">Add to cart</button></center>
+                                                                      </div>
+                                                                    </div>
+                                                                  
+                                                              <!-- END GRID -->
+                                                              </div>
+                                                              
+                                                              <!-- END MAIN -->
+                                                              </div>
+                                                              
+                                                              <script>
+                                                              filterSelection("all")
+                                                              function filterSelection(c) {
+                                                                var x, i;
+                                                                x = document.getElementsByClassName("column");
+                                                                if (c == "all") c = "";
+                                                                for (i = 0; i < x.length; i++) {
+                                                                  w3RemoveClass(x[i], "show");
+                                                                  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                                                                }
+                                                              }
+                                                              
+                                                              function w3AddClass(element, name) {
+                                                                var i, arr1, arr2;
+                                                                arr1 = element.className.split(" ");
+                                                                arr2 = name.split(" ");
+                                                                for (i = 0; i < arr2.length; i++) {
+                                                                  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                                                                }
+                                                              }
+                                                              
+                                                              function w3RemoveClass(element, name) {
+                                                                var i, arr1, arr2;
+                                                                arr1 = element.className.split(" ");
+                                                                arr2 = name.split(" ");
+                                                                for (i = 0; i < arr2.length; i++) {
+                                                                  while (arr1.indexOf(arr2[i]) > -1) {
+                                                                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                                                                  }
+                                                                }
+                                                                element.className = arr1.join(" ");
+                                                              }
+                                                              
+                                                              
+                                                              // Add active class to the current button (highlight it)
+                                                              var btnContainer = document.getElementById("myBtnContainer");
+                                                              var btns = btnContainer.getElementsByClassName("btn");
+                                                              for (var i = 0; i < btns.length; i++) {
+                                                                btns[i].addEventListener("click", function(){
+                                                                  var current = document.getElementsByClassName("active");
+                                                                  current[0].className = current[0].className.replace(" active", "");
+                                                                  this.className += " active";
+                                                                });
+                                                              }
+                                                              </script>
+                                                              
+
+                                                              
+
+<footer>
+
+
+</footer>                                 
+                                                                          
+
+
+
+
+
+
+
+				 
+                                                       
+	 
+	                          
+
+</body>
+</html>
